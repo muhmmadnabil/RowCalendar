@@ -1,0 +1,7 @@
+<resources>
+    <declare-styleable name="RowCalendar">
+        <attr name="includeCurrentDate" format="boolean" />
+        <attr name="multiSelection" format="boolean" />
+        <attr name="longPress" format="boolean" />
+    </declare-styleable>
+</resources>

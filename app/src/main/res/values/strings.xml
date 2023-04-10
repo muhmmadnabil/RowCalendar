@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Row Calendar</string>
+    <string name="select_date">SELECT A DATE</string>
+</resources>
