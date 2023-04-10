@@ -120,7 +120,6 @@ rowCalendar.init(calendarViewManager)
   * Handle onClickListener
 * ```onLongPressed```
   * Handle onLongPress
-*
 * ```setCalendarResource()```
   * set the layouts of the calendar
 * ```bindData()```
@@ -143,7 +142,6 @@ You can use DateUtils class when you want get some values from date.
 ## CONTRIBUTE
 * the best way to submit a patch is to send me a pull request
 * to report a specific problem or feature request, open a new issue on Github
-* follow this contribution [rules](https://github.com/miso01/SingleRowCalendar/blob/docs/CONTRIBUTE.md)
 
 ## SEND ME YOUR CREATIONS
 * feel free to contact me and send me your app [here](https://github.com/miso01/SingleRowCalendar/blob/docs/CONTACT.md)
