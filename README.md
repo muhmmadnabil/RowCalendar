@@ -18,6 +18,14 @@ Android library for the horizontal calendar like IOS calendar.
 
 ## INSTALLATION
 #### GRADLE 
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
 ```
 dependencies {
 	 implementation 'com.github.muhmmadnabil:RowCalendar:1.0.0'
