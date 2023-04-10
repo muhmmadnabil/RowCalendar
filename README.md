@@ -105,23 +105,6 @@ rowCalendar.init(calendarViewManager)
 ```
 }  
 
-
-#### 7. provide dates and init SingleRowCalendar in your code
-You can choose between two ways of doing it. If you want simple provide few past of future days, you should specify these attributes ```pastDaysCount```, ```futureDaysCount``` and ```includeCurrentDate``` in an XML or directly in code. 
-If you are not satisfied with the previous solution you can specify your own list of dates using ```setDates``` function. 
-When you provide dates to the calendar you can also set you initial position using this property ```initialPositionIndex```.
-
-```kotlin
-val singleRowCalendar = main_single_row_calendar.apply {        
-    calendarViewManager = myCalendarViewManager                
-    calendarChangesObserver = myCalendarChangesObserver        
-    calendarSelectionManager = mySelectionManager              
-    futureDaysCount = 30                                       
-    includeCurrentDate = true                                  
-    init()                                                     
-}                                                              
-```
-
 ## PARAMETERS AND FUNCTIONS
 * ```pastDaysCount```
   * number of days in past displayed in the calendar
