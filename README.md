@@ -106,77 +106,39 @@ rowCalendar.init(calendarViewManager)
 }  
 
 ## PARAMETERS AND FUNCTIONS
-* ```pastDaysCount```
-  * number of days in past displayed in the calendar
-* ```futureDaysCount```
-  * number of days in future displayed in the calendar
 * ```includeCurrentDate```
-  * include current date in the calendar
-* ```initialPositionIndex```
-  * first displayed item in the calendar
+  * include the current date with custom layout
 * ```multiSelection```
-  * enable or disable multi selection
-* ```deselection```
-  * enable or disable deselection 
+  * enable multiSelection
 * ```longPress```
-  * first selected item starts with a long press
-* ```calendarChangesObserver```  
-  * using this callback we can observe for changes in the calendar
-* ```calendarViewManager```  
-  * this callback is responsible for inflating item views to calendar
-* ```calendarSelectionManager```  
-  * using this callback we can enable or disable selection for particular items 
-* ```setDates(newDateList: List<Date>)```  
-  * when you don't want to use ```pastDaysCount``` and ```futureDaysCount``` you can specify your list of dates
-* ```getDates()```
-  * returns used dates in the calendar
-* ```getSelectedIndexes()```
-  * returns list of selected postions
-* ```getSelectedDates()```
-  * returns list of selected dates
-* ```onSaveInstanceState(state: Bundle)```
-  * preserves selection
-* ```onRestoreInstanceState(state: Bundle)```
-  * restores selection from previously saved state
-* ```hasSelection()```
-  * returns true if calednar has any item selected
-* ```isSelected(position: Int)```
-  * check if particular item is selected
-* ```deselect(position: Int)```
-  * attempts to deselect an item
-* ```select(position: Int)```
-  * attempts to select an item 
-* ```setItemsSelected(positionList: List<Int>, selected: Boolean)```
-  * you can select or deselect multiple items at once
-* ```clearSelection()```
-  * deselect all items in the calendar 
+  * enable longPress
+* ```getNextMonth()```
+  * make the date on the calendar is the next month
+* ```getPreviousMonth()```
+  * make the date on the calendar is the previous month
+* ```onClickListener()```
+  * Handle onClickListener
+* ```onLongPressed```
+  * Handle onLongPress
+*
+* ```setCalendarResource()```
+  * set the layouts of the calendar
+* ```bindData()```
+  * Bind the data of the items in calendar
 
-### DateUtils class
+### DateHelper class
 You can use DateUtils class when you want get some values from date. 
 * ```getDayName(date: Date)```
   * returns day name, for example Friday, Thursday, Monday, etc...
 * ```getDay3LettersName(date: Date)```
   * returns day abbreviation, for example Fri, Thu, Mon, etc...
-* ```getDay1LetterName(date: Date)```
+* ```getDayLetter(date: Date)```
   * returns day abbreviation, for example F, T, M, S, etc...
 * ```getMonthNumber(date: Date)```
   * returns month number, for example 1, 3, 12, 9, etc...
 * ```getMonthName(date: Date)```
   * returns month name, for example December, September, January, etc...
-* ```getMonth3LettersName(date: Date)```
-  * returns month abbreviation, for example Jan, Feb, Dec, etc...
-* ```getYear(date: Date)```
-  * returns year, for example 2010, 2019, 2020, 2034...
-* ```getDayNumber(date: Date)```
-  * returns number of day in a month, for example 15, 16, 17, etc...
-* ```getNumberOfWeek(date: Date)```
-  * returns number of week in a year, for example 1, 5, 22, 50 etc...
-* ```getFutureDates(count: Int)```
-  * returns a list of future dates with specified length
-* ```getPastDates(count: Int)```
-  * returns a list of past dates with specified length 
-* ```getDates(pastDays: Int, futureDays: Int, includeCurrentDate: Boolean)```  
-  * returns a list of dates with specified parameters
+
   
 ## CONTRIBUTE
 * the best way to submit a patch is to send me a pull request
