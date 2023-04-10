@@ -142,5 +142,3 @@ You can use DateUtils class when you want get some values from date.
 ## CONTRIBUTE
 * the best way to submit a patch is to send me a pull request
 * to report a specific problem or feature request, open a new issue on Github
-
-## LICENSE 
