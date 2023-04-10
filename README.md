@@ -10,23 +10,17 @@ Android library for the horizontal calendar like IOS calendar.
 ## FEATURES
 * single selection
 * multiple selection
-* enable/disable long press to start selection
-* enable/disable deselection
-* set count of dates in past or future, or you can provide your dates
-* initial position
-* easily observe for changes in selection
+* long press selection
 * control selection of particular items using selection manager 
-* programmatically deselect and select items
 * check if the item is selected
 * set selection
-* clear selection
 * and more...
 
 ## INSTALLATION
 #### GRADLE 
 ```
 dependencies {
-    implementation 'com.michalsvec:single-row-calednar:1.0.0'
+	 implementation 'com.github.muhmmadnabil:RowCalendar:1.0.0'
 }
 ```
 
