@@ -2,7 +2,15 @@
 
 Android library for the horizontal calendar like IOS calendar.
 
-https://user-images.githubusercontent.com/70924560/230875450-11c3fa7d-d177-4059-9ff6-82e1845ebaba.mp4
+
+
+<div class="video">
+    <video controls (click)="toggleVideo()" #videoPlayer>
+        <source src="https://user-images.githubusercontent.com/70924560/230875450-11c3fa7d-d177-4059-9ff6-82e1845ebaba.mp4" type="video/mp4" />
+        Browser not supported
+    </video>
+</div>
+
 <img src="https://user-images.githubusercontent.com/70924560/230875431-222f0909-5443-4ed1-8846-9843981d7a1" width="285"/> 
 <img src="https://user-images.githubusercontent.com/70924560/230875510-37c2d211-b49d-4dcf-b301-947f2d8ac655.gif" width="285" /> 
 
