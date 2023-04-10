@@ -1,8 +1,6 @@
-# RowCalendar![rowCalendar1](https://user-images.githubusercontent.com/70924560/230875387-9d51039e-a166-4746-8524-e0869bd960ae.gif)
+# RowCalendar
 
 Android library for the horizontal calendar like IOS calendar.
-
-
 
 <div class="video">
     <video controls (click)="toggleVideo()" #videoPlayer>
@@ -11,6 +9,7 @@ Android library for the horizontal calendar like IOS calendar.
     </video>
 </div>
 
+![rowCalendar1](https://user-images.githubusercontent.com/70924560/230875387-9d51039e-a166-4746-8524-e0869bd960ae.gif)
 <img src="https://user-images.githubusercontent.com/70924560/230875431-222f0909-5443-4ed1-8846-9843981d7a1" width="285"/> 
 <img src="https://user-images.githubusercontent.com/70924560/230875510-37c2d211-b49d-4dcf-b301-947f2d8ac655.gif" width="285" /> 
 
