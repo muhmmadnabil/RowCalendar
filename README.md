@@ -35,11 +35,10 @@ dependencies {
 #### MAVEN
 ```
 <dependency>
-	<groupId>com.michalsvec</groupId>
-	<artifactId>single-row-calednar</artifactId>
-	<version>1.0.0</version>
-	<type>pom</type>
-</dependency>
+	    <groupId>com.github.muhmmadnabil</groupId>
+	    <artifactId>RowCalendar</artifactId>
+	    <version>1.0.0</version>
+	</dependency>
 ```
 
 ## USAGE
