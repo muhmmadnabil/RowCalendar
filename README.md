@@ -6,8 +6,6 @@ Android library for the horizontal calendar like IOS calendar.
 https://user-images.githubusercontent.com/70924560/230875450-11c3fa7d-d177-4059-9ff6-82e1845ebaba.mp4
 ![rowCalendar3](https://user-images.githubusercontent.com/70924560/230875510-37c2d211-b49d-4dcf-b301-947f2d8ac655.gif)
 
-e.gif)
-
 
 ## FEATURES
 * single selection
