@@ -143,9 +143,5 @@ You can use DateUtils class when you want get some values from date.
 * the best way to submit a patch is to send me a pull request
 * to report a specific problem or feature request, open a new issue on Github
 
-## SEND ME YOUR CREATIONS
-* feel free to contact me and send me your app [here](https://github.com/miso01/SingleRowCalendar/blob/docs/CONTACT.md)
-* potentially your calendar can be here as a presentation of the library 
-
 ## LICENSE 
 The library is licensed under [Apache License](https://github.com/miso01/SingleRowCalendar/blob/docs/LICENSE). 
