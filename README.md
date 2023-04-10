@@ -45,83 +45,63 @@ dependencies {
 #### 1. create calendar item view layout files
 * create layout files, which will be defining how you calendar will look like <br>
 * basic item - selected and deselected <br>
-<img src="presentation_assets/basic_itemview.png" width="80"/>  <img src="presentation_assets/basic_selected_itemview.png" width="80" />
 
 #### 2. create special calendar item view layout files (optional)
 * if you need some special items, which will be displayed accroding to your logic you can add them 
 * special item - selected and deselected <br>
-<img src="presentation_assets/special_itemview.png" width="80"/> <img src="presentation_assets/special_selected_itemview.png" width="80" />
 
-#### 3. add SingleRowCalendar to your activty or fragment layout file
+#### 3. add RowCalendar to your activty or fragment layout file
 
 ```xml
-<com.michalsvec.singlerowcalendar.calendar.SingleRowCalendar
-        android:id="@+id/main_single_row_calendar"
+ <com.muhmmad.rowcalendar.calendar.RowCalendar
+        android:id="@+id/row_calendar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:deselection="false"
-        app:longPress="false"
-        app:multiSelection="false" />
+        android:layout_margin="5dp"
+        app:longPress="true" />
 ```
 
 #### 4. setup CalendarViewManager
 
 ```kotlin
-val myCalendarViewManager = object : CalendarViewManager {  
-    override fun setCalendarViewResourceId(                 
-        position: Int,                                      
-        date: Date,                                         
-        isSelected: Boolean                                 
-    ): Int {                                                
-        // return item layout files, which you have created 
-    }                                                       
-                                                            
-    override fun bindDataToCalendarView(                    
-        holder: SingleRowCalendarAdapter.CalendarViewHolder,
-        date: Date,                                         
-        position: Int,                                      
-        isSelected: Boolean                                 
-    ) {                                                     
-        // bind data to calendar item views                 
-    }                                                       
-}  
+ val calendarViewManager = object :
+                CalendarViewManager {
+                override fun setCalendarResource(isToday: Boolean, isSelected: Boolean): Int {
+                    return if (isToday) R.layout.today_calendar_item
+                    else if (isSelected) R.layout.selected_calendar_item
+                    else R.layout.calendar_item
+                }
+
+                override fun bindData(
+                    holder: CalendarAdapter.ViewHolder,
+                    date: Date,
+                    position: Int,
+                    isSelected: Boolean
+                ) {
+                    holder.itemView.findViewById<TextView>(R.id.tv_date_calendar_item).text =
+                      DateHelper.getDay(date)
+
+                    holder.itemView.findViewById<TextView>(R.id.tv_day_calendar_item).text =
+                     DateHelper.getDayLetter(date)
+
+                }
+            }
 ```
 
-#### 5. setup CalendarSelectionManager
+#### 5. initialize RowCalendar
 
 ```kotlin
-val mySelectionManager = object : CalendarSelectionManager {             
-    override fun canBeItemSelected(position: Int, date: Date): Boolean { 
-        // return true if item can be selected                           
-    }                                                                    
-}
+rowCalendar.init(calendarViewManager)
 ```
 
-#### 6. setup CalendarChangesObserver
+#### 6. setup RowCalendar OnClickListener & OnLongPressd
 ```kotlin
-val myCalendarChangesObserver = object : CalendarChangesObserver {                                                            
-    override fun whenWeekMonthYearChanged(weekNumber: String,monthNumber: String,monthName: String,year: String,date: Date) { 
-        super.whenWeekMonthYearChanged(weekNumber, monthNumber, monthName, year, date)                                        
-    }                                                                                                                         
-                                                                                                                              
-    override fun whenSelectionChanged(isSelected: Boolean, position: Int, date: Date) {                                       
-        super.whenSelectionChanged(isSelected, position, date)                                                                
-    }                                                                                                                         
-                                                                                                                              
-    override fun whenCalendarScrolled(dx: Int, dy: Int) {                                                                     
-        super.whenCalendarScrolled(dx, dy)                                                                                    
-    }                                                                                                                         
-                                                                                                                              
-    override fun whenSelectionRestored() {                                                                                    
-        super.whenSelectionRestored()                                                                                         
-    }                                                                                                                         
-                                                                                                                              
-    override fun whenSelectionRefreshed() {                                                                                   
-        super.whenSelectionRefreshed()                                                                                        
-    }   
+ rowCalendar.onClickListener {
+                Toast.makeText(root.context, "click", Toast.LENGTH_SHORT).show()
+            }
+            rowCalendar.onLongPressed {
+                Toast.makeText(root.context, "LongPress", Toast.LENGTH_SHORT).show()
+            } 
 ```
 }  
 
