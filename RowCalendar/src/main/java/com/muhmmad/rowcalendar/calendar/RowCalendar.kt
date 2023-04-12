@@ -112,5 +112,4 @@ class RowCalendar(context: Context, attrs: AttributeSet) : RecyclerView(context,
         this.multiSelection = multiSelection
         calendarAdapter.setMultiSelection(multiSelection)
     }
-
 }
