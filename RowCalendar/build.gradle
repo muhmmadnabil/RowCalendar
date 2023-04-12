@@ -45,10 +45,9 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-
                 groupId = 'com.github.muhmmadnabil'
                 artifactId = 'RowCalendar'
-                version = '1.1'
+                version = '1.2'
             }
         }
     }
